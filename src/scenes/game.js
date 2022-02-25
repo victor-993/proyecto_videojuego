@@ -14,7 +14,7 @@ export class Game extends Phaser.Scene {
   create() {
     this.add.image(410, 250, "background");
 
-    this.player = this.add.sprite(300, 50, "luis");
+    this.player = this.add.sprite(400, 250, "luis");
     this.anims.create({
       key: "baile",
       frames: this.anims.generateFrameNumbers("luis", { start: 0, end: 11 }),
