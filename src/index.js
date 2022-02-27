@@ -1,10 +1,11 @@
 import { Game } from './scenes/game';
+import { levelAndrea } from './scenes/levelAndrea';
 
 const config = {
   type: Phaser.AUTO,
   width: 800,
-  height: 500,
-  scene: [Game],
+  height: 600,
+  scene: [levelAndrea],
   physics: {
     default: 'arcade',
     arcade: {
