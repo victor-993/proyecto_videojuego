@@ -4,7 +4,14 @@ export class levelAndrea extends Phaser.Scene {
   }
 
   preload() {
-    this.load.image("background", "assets/images/background.png");
+    this.load.image("1Hierba", "assets/images/fondo/1Hierba.png");
+    this.load.image("3Carretera", "assets/images/fondo/3Carretera.png");
+    this.load.image("3Carretera", "assets/images/fondo/3Carretera.png"); 
+    this.load.image("3Hierba", "assets/images/fondo/3Hierba.png");
+    this.load.image("4Arboles", "assets/images/fondo/4Arboles.png");
+    this.load.image("5Montañas1", "assets/images/fondo/5Montañas1.png");
+    this.load.image("6Cielo1", "assets/images/fondo/6Cielo1.png");
+    //this.load.image("background", "assets/images/background.png");
     this.load.image(
       "plataforma",
       "assets/images/Plataformas/sueloarribax3.png"
@@ -16,13 +23,18 @@ export class levelAndrea extends Phaser.Scene {
   }
 
   create() {
-    this.add.image(410, 250, "background").setScale(2);
+    this.add.image(400,300, "6Cielo1");
+    this.add.image(400, 302, "1Hierba");
+    this.add.image(400,315, "3Carretera");
+    this.add.image(400,322, "5Montañas1");
+    this.add.image(400,322, "4Arboles");
+    this.add.image(400,319, "3Hierba");
     this.platforms = this.physics.add.staticGroup();
 
-    this.platforms.create(400, 568, "plataforma").setScale(20, 1).refreshBody();
+    this.platforms.create(400, 575, "plataforma").setScale(20, 1).refreshBody();
 
     this.platforms.create(600, 400, "plataforma");
-    this.platforms.create(50, 250, "plataforma");
+    this.platforms.create(50, 350, "plataforma");
     this.platforms.create(750, 220, "plataforma");
 
     this.player = this.physics.add.sprite(400, 250, "andrea").setScale(1.5);
